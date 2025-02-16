@@ -26,7 +26,7 @@ export default function NewUser() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/api/users", userData);
+      await axios.post("https://admin-dashboard-backend-ecg9.onrender.com", userData);
       alert("User created successfully!");
       navigate("/users"); // ✅ Redirect to user list after creation
     } catch (error) {

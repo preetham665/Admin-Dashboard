@@ -23,8 +23,8 @@ export default function User() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        console.log(`Fetching user from: http://localhost:3000/api/users/${id}`);
-        const res = await axios.get(`http://localhost:3000/api/users/${id}`);
+        console.log(`Fetching user from: https://admin-dashboard-backend-ecg9.onrender.com`);
+        const res = await axios.get(`https://admin-dashboard-backend-ecg9.onrender.com`);
         console.log("User fetched successfully:", res.data);
         setUser(res.data);
         setUpdatedUser(res.data);
@@ -49,7 +49,7 @@ export default function User() {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3000/api/users/${id}`, updatedUser);
+      await axios.put(`https://admin-dashboard-backend-ecg9.onrender.com`, updatedUser);
       alert("User updated successfully!");
       navigate("/userList"); // Redirect to the user list
     } catch (err) {

@@ -13,7 +13,7 @@ export default function UserList() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/users"); // Fetch all users
+        const response = await axios.get("https://admin-dashboard-backend-ecg9.onrender.com"); // Fetch all users
         console.log("Fetched users from backend:", response.data); // Debugging
         setData(response.data); // Set state with user data
       } catch (error) {
@@ -26,7 +26,7 @@ export default function UserList() {
   // Handle user deletion
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/users/${id}`);
+      await axios.delete(`https://admin-dashboard-backend-ecg9.onrender.com`);
       setData((prevData) => prevData.filter((user) => user._id !== id)); // Remove deleted user
     } catch (error) {
       console.error("Error deleting user:", error);
